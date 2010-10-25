@@ -1,0 +1,30 @@
+#
+#   spc configuration file
+#
+# col - color (blk, red, grn, yel, blu, mag, cya, whi)
+#
+#   a - color attribute (console_code)
+#         ' ':normal          (0)
+#         '-':normal          (0)
+#         'b':bold            (1)
+#         'u':underline       (4)
+#         'r':reverse-video   (7)
+#         'k':blink           (5)
+#
+#   n - number of matches,  (' ':1, '1'-'9':1-9, '0':all)
+#
+#   t - pattern type
+#         'c':chars     (strchr)
+#         's':string    (strstr)
+#         't':regexp    (regcomp) (convert 10-digit unix time to MMDDHHMMSS)
+#         'r':regexp    (regcomp)
+#         ' ':regexp    (regcomp)
+#
+#                    col a n t pattern
+#################### ### # # # ########################################
+Yellow               yel - 1 r ^(Download )
+Green                grn - 1 r (UP-TO-DATE)
+Yellow               yel - 1 r (SKIPPED)
+Green                grn - 1 r ^(BUILD SUCCESSFUL)$
+Red                  red - 1 r ^(FAILURE:)
+Red                  red - 1 r ^(BUILD FAILED)$
