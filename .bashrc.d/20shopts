@@ -1,0 +1,7 @@
+## Enable egrep-style pattern matching
+shopt -s extglob
+
+## This option mostly keeps you from needing to run "hash -r" when you
+## modify directories in your path
+shopt -s checkhash
+

@@ -1,0 +1,4 @@
+## If you are a developer, uncomment the following to make sure core dumps
+## will be generated when they should be
+#ulimit -c unlimited
+

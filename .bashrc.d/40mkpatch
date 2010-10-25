@@ -1,0 +1,2 @@
+alias mkpatch='/usr/bin/diff -Naur $*'
+

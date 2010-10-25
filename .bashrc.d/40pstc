@@ -1,0 +1,3 @@
+## jps is accurate but much much slower that ps/pgrep 
+alias pstc="jps -l | grep org.apache.catalina.startup.Bootstrap | awk '{print \$1}'"
+

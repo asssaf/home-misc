@@ -1,0 +1,5 @@
+## Midnight Commander chdir enhancement
+if [ -f /usr/share/mc/mc.gentoo ]; then
+	. /usr/share/mc/mc.gentoo
+fi
+

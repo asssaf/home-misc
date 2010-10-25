@@ -1,0 +1,4 @@
+## cdargs
+[ -f /usr/share/cdargs/cdargs-bash.sh ] && \
+        source /usr/share/cdargs/cdargs-bash.sh
+

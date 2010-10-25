@@ -1,0 +1,35 @@
+# colors for ls, etc.  Prefer ~/.dir_colors #64489
+if [[ -f ~/.dir_colors ]] ; then
+	eval $(dircolors -b ~/.dir_colors)
+elif [[ -f /etc/DIR_COLORS ]] ; then
+	eval $(dircolors -b /etc/DIR_COLORS)
+fi
+
+
+alias diff='colordiff'
+alias grep='grep --color=auto'
+
+function cvsdiff () { cvs diff $@ | colordiff |less -R; }
+function svndiff () { svn diff "$@" | colordiff |less -R; }
+
+
+function mvn () { /usr/bin/mvn $* | spc -t mvn; }
+function p4s () { p4 sync $* 2>&1 | spc -t p4sync; }
+function p4sn () { p4 sync -n $* 2>&1 | spc -t p4sync; }
+function gradle () { /usr/bin/gradle $* | spc -t gradle; }
+
+function svn () { 
+	# exclude commit/propedit because spc interferes with the terminal editor for commit message
+	if [[ " $* " =~ " commit " || "$*" =~ " propedit " || ! -t 1  ]] 
+	then
+		# no terminal, possibly in a pipe so don't interfere
+		/usr/bin/svn "$@"
+	else
+		# running in terminal so use spc
+		/usr/bin/svn "$@" | spc -t svn; 
+	fi
+}
+
+export COLORANT="yes"
+
+export PATH=/usr/lib/colorgcc/bin:$PATH

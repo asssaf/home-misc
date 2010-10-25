@@ -1,0 +1,3 @@
+## Correct minor spelling errors in cd commands
+shopt -s cdspell
+

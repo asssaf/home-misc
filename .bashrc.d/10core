@@ -1,0 +1,8 @@
+alias cp='cp -v $*'
+alias rm='rm -v $*'
+alias mv='mv -v $*'
+
+alias ls='ls --color=auto $*'
+alias ll='ls -laFh'
+alias lt='ll -tr'
+alias less='less --ignore-case'

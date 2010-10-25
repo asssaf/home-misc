@@ -1,0 +1,2 @@
+alias ns='netstat -n -p -W | grep tcp'
+

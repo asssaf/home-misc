@@ -1,0 +1,29 @@
+## Do *not* append the following to our history: consecutive duplicate
+## commands, ls, bg and fg, and exit
+## Don't keep useless history commands. Note the last pattern is to not
+## keep dangerous commands in the history file.  Who really needs to
+## repeat the shutdown(8) command accidentally from your command
+## history?
+HISTIGNORE='\&:fg:bg:pwd:jobs:set -x'
+HISTIGNORE=${HISTIGNORE}':%1:%2:popd:shutdown*'
+export HISTIGNORE
+
+## Save multi-line commands in history as single line
+shopt -s cmdhist
+
+## Disk is cheap. Memory is cheap. My memory isn't! Keep a lot of
+## history by default. 10K lines seems to go back about 6 months, and
+## captures all of the wacky one-off shell scripts that I might want
+## again later.
+export HISTSIZE=100000
+export HISTFILESIZE=${HISTSIZE}
+
+## Reduce redundancy in the history file - prevent bash from caching duplicate history entries
+export HISTCONTROL=ignoredups
+
+## Do not delete your precious history file before writing the new one
+shopt -s histappend
+
+## This is useful for embedded newlines in commands and quoted arguments
+shopt -s lithist
+

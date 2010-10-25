@@ -1,0 +1,5 @@
+#using a hebrew locale sucks (some messages get translated to hebrew, missing man pages, etc.)
+#export LANG="he_IL.utf8"
+
+export TZ='Asia/Jerusalem'
+

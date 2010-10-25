@@ -1,0 +1,6 @@
+# adding a trailing blank allows giving an alias as an argument
+alias sudo='sudo '
+alias nice='nice '
+alias nohup='nohup '
+alias time='time '
+

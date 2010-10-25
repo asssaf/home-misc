@@ -1,0 +1,4 @@
+cdup () { cd .. ; while ([ $PWD != / -a `basename $PWD` != "$1" ]); do cd .. ; done ; }
+#cddown () { local pdir=$PWD; find . -name "$1" -type d -ok cd $pdir/\{\} \; ; }
+#cddown () { local pdir=$PWD; find . -name "$1" -type d -exec echo exec /bin/sh -c cd $pdir/\{\} \; ; }
+#cddown () { local pdir=$PWD; find . -name "$1" -type d -ok /bin/sh -c exec cd $pdir/\{\} \; ; }

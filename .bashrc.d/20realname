@@ -1,0 +1,3 @@
+## Set REALNAME from /etc/passwd
+export REALNAME=`grep $USER /etc/passwd | awk -F: '{ print $5 }' 2>/dev/null`
+
