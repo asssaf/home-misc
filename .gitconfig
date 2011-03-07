@@ -1,0 +1,5 @@
+[user]
+	name = assaf
+[filter "email"]
+	clean = sed -r 's/[^ ]+@[^ ]+/$EMAIL$/'
+	smudge = cat
