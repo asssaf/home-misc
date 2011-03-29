@@ -1,0 +1,4 @@
+function svncl() {
+	/usr/bin/svn st --changelist $1  | tail -n +3 | awk '{ print $2 }' | tr '\n' ' '
+}
+
