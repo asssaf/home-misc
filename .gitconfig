@@ -4,6 +4,9 @@
 	clean = sed -r 's/[^ ]+@[^ ]+/$EMAIL$/'
 	smudge = cat
 
+[push]
+	default = upstream
+
 [color]
   branch = auto
   diff = auto
