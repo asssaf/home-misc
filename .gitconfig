@@ -2,7 +2,7 @@
 	name = assaf
 	email = assaf@localhost
 [filter "email"]
-	clean = sed -r 's/[^ ]+@[^ ]+/$EMAIL$/'
+	clean = sed 's/[^ ]*@[^ ]*/$EMAIL$/g'
 	smudge = cat
 
 [push]
