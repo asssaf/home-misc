@@ -1,6 +1,7 @@
 [user]
 	name = assaf
-	email = assaf@localhost
+	# Don't set a default email, otherwise you don't get a warning on new repositories
+	#email = assaf@localhost
 [filter "email"]
 	clean = sed 's/[^ ]*@[^ ]*/$EMAIL$/g'
 	smudge = cat
